@@ -13,3 +13,5 @@ CMD ["apachectl", "-D", "FOREGROUND"]
 Then we use "docker build -t [name of the img] ."
 
 And finally, "docker run -d -p [the port you want]:80 --name [name of container] [name of img]"
+
+If you wanted to create multiple containers, you would use the following bash syntax: for i in {1..20}; do docker run -d -p $((1212+$i)):80 --name container$i [name of img]; done
